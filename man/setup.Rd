@@ -15,7 +15,7 @@ setup(n_players = 2, n_owls = 3, n_cards_per_player = 3)
 player.}
 }
 \value{
-A list with elements deck, player, board, sun, and discard.
+A list the following items:
   \code{deck} contains the shuffled cards
   \code{player} is a n_cards_per_player x n_players matrix with the in hand
     cards
@@ -23,6 +23,7 @@ A list with elements deck, player, board, sun, and discard.
     whether those spaces are occupied
   \code{sun} an integer specifying where the sun is (0 is a loss)
   \code{discard} the cards in the discard pile (initially NULL)
+  \code{turn} an integer specifying whose turn it is
 }
 \description{
 Setup Hoot Owl Hoot! Game
