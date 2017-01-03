@@ -11,12 +11,14 @@
 #' game <- setup_game()
 #' game <- play_card(game$player$player1[1])
 #'
-play_card <- function(card, owl, game) {
+play_card <- function(card, game, owl=NULL) {
 
   check_card(card, game)
 
   if (card == "sun") {
     game$sun <- game$sun-1
+    if (!is.null(owl))
+      warning("`owl` argument was ignored")
   } else {
     game <- move_owl(card, owl, game)
   }
