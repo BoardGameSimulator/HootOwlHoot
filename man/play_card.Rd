@@ -4,15 +4,15 @@
 \alias{play_card}
 \title{Play a card}
 \usage{
-play_card(card, owl, game)
+play_card(card, game, owl = NULL)
 }
 \arguments{
 \item{card}{A character string indicating a card}
 
+\item{game}{A game state}
+
 \item{owl}{An integer specifying which owl to move. Owl #1 is closest to the
 end.}
-
-\item{game}{A game state}
 }
 \value{
 An updated game state
@@ -21,11 +21,11 @@ An updated game state
 Play a card
 }
 \examples{
-game <- setup()
-game <- play(game$player$player1[1])
+game <- setup_game()
+game <- play_card(game$player$player1[1])
 
 }
 \seealso{
-\link{\code{setup}}
+\link{\code{setup_game}}
 }
 

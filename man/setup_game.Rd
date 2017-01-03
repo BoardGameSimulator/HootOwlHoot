@@ -29,7 +29,7 @@ A list the following items:
 Setup Hoot Owl Hoot! Game
 }
 \examples{
-board <- setup(n_players = 3, n_owls = 4)
+board <- setup_game(n_players = 3, n_owls = 4)
 
 }
 

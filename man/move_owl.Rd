@@ -13,6 +13,9 @@ move_owl(card, owl, game)
 
 \item{game}{A current game state}
 }
+\value{
+An updated game state
+}
 \description{
 Move an owl to specified location
 }

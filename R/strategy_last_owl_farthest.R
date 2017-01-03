@@ -3,7 +3,7 @@
 #' Play a sun if you have a sun, otherwise move the last owl to the location
 #' that moves them the farthest.
 #'
-#' @param game
+#' @param game A current game state
 #' @return list with these elements:
 #'   \code{card} string indicating what card to play
 #'   \code{owl} an integer indicating the owl to move

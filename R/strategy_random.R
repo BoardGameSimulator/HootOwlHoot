@@ -3,7 +3,7 @@
 #' Play a sun if you have a sun, otherwise play a random card
 #' on a random owl.
 #'
-#' @param game
+#' @param game A current game state
 #' @return list with these elements:
 #'   \code{card} string indicating what card to play
 #'   \code{owl} an integer indicating the owl to move
