@@ -1,0 +1,10 @@
+Package: HootOwlHoot
+Title: Simulates the board game Hoot Owl Hoot!
+Version: 0.0.0.9000
+Authors@R: person("Jarad", "Niemi", email = "niemi@iastate.edu", role = c("aut", "cre"))
+Description: Provides functions and visualization (to be added) for simulating
+    the board game Hoot Owl Hoot.
+Depends: R (>= 3.3.1)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
