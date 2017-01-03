@@ -15,8 +15,9 @@ move_owl <- function(card, owl, game) {
   # Find a valid space and move it there
   valid_space <- which(game$board$space[1:(owl_location-1)] == card &
                          !game$board$occupied[1:(owl_location-1)])
+
   if (length(valid_space) > 0) {
-    game$board_occupied[max(valid_space)]
+    game$board$occupied[max(valid_space)] <- TRUE
   }
 
   # If no spaces are valid, then the owl "leaves" the board.
