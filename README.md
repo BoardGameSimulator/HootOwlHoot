@@ -1,2 +1,7 @@
-# HootOwlHoot
-An R package to simulate the board game Hoot Owl Hoot!
+## Installation
+
+To install this package, start R and enter:
+
+```
+devtools::install_github("BoardGameSimulator/HootOwlHoot", ref = "Rpackage")
+```
