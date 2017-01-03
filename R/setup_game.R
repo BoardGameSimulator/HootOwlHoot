@@ -15,9 +15,9 @@
 #'   \code{turn} an integer specifying whose turn it is
 #' @export
 #' @examples
-#' board <- setup(n_players = 3, n_owls = 4)
+#' board <- setup_game(n_players = 3, n_owls = 4)
 #'
-setup <- function(n_players = 2, n_owls = 3, n_cards_per_player = 3) {
+setup_game <- function(n_players = 2, n_owls = 3, n_cards_per_player = 3) {
   game <- list()
 
   cards <- rep(c("sun",
