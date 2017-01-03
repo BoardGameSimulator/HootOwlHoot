@@ -10,7 +10,7 @@
 #' game <- setup()
 #' check(game)
 #'
-check <- function(game) {
+check_game_status <- function(game) {
   if (game$sun == 0) return("loss")
   if (all(!game$board$occupied)) return("win")
   return("in progress")
