@@ -2,6 +2,16 @@
 #'
 #' @param n_players An integer (2-4) specifying the number of players
 #' @param n_owls An integer (1-6) specifying the number of owls
+#' @param n_cards_per_player An integer specifying the number of cards per
+#'   player.
+#' @return A list with elements deck, player, board, sun, and discard.
+#'   \code{deck} contains the shuffled cards
+#'   \code{player} is a n_cards_per_player x n_players matrix with the in hand
+#'     cards
+#'   \code{board} a \code{data.frame} containing the spaces on the board and
+#'     whether those spaces are occupied
+#'   \code{sun} an integer specifying where the sun is (0 is a loss)
+#'   \code{discard} the cards in the discard pile (initially NULL)
 #' @export
 #' @examples
 #' board <- setup(n_players = 3, n_owls = 4)
@@ -46,6 +56,8 @@ setup <- function(n_players = 2, n_owls = 3, n_cards_per_player = 3) {
 
   # set sun
   game$sun <- 13 # 0 is loss
+
+  game$discard <- NULL
 
   return(game)
 }
