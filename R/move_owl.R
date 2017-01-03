@@ -10,7 +10,7 @@ move_owl <- function(card, owl, game) {
   check_owl(owl, game)
 
   owl_location <- which(game$board$occupied)[owl]
-  game$board$occupied[owl_locaton] <- FALSE
+  game$board$occupied[owl_location] <- FALSE
 
   # Find a valid space and move it there
   valid_space <- which(game$board$space[1:(owl_location-1)] == card &
