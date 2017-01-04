@@ -21,14 +21,14 @@ strategy_last_owl_farthest <- function(game) {
     play$card <- "sun"
   } else {
     # Find board locations available in front of last owl
-    board_spaces <- game$board$space[1:(max(which(game$board$occupied))-1)]
-    board_spaces <- board_spaces[!game$board$occupied[1:length(board_spaces)]]
+    board_colors <- game$board$color[1:(max(which(game$board$occupied))-1)]
+    board_colors <- board_colors[!game$board$occupied[1:length(board_colors)]]
 
-    # Find which card will move owl the farthest by reversing the board spaces
-    rev_spaces <- rev(board_spaces)
+    # Find which card will move owl the farthest by reversing the board colors
+    rev_colors <- rev(board_colors)
     n_spaces_moved <- numeric(length(player_cards))
     for (i in seq_along(player_cards)) {
-      n_spaces_moved[i] <- match(player_cards[i],rev_spaces)
+      n_spaces_moved[i] <- match(player_cards[i],rev_colors)
     }
 
     # Play the card that moved the maximum number of spaces

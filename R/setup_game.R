@@ -21,9 +21,9 @@ setup_game <- function(n_players = 2, n_owls = 3, n_cards_per_player = 3) {
   game <- list()
 
   cards <- rep(c("sun",
-                     "yellow","blue","green",
-                     "red","purple","orange"),
-                   times = c(14, rep(6,6)))
+                 "yellow","blue","green",
+                 "red","purple","orange"),
+               times = c(14, rep(6,6)))
 
   game$deck <- shuffle(cards)
 
@@ -36,7 +36,7 @@ setup_game <- function(n_players = 2, n_owls = 3, n_cards_per_player = 3) {
   game$deck <- game$deck[-card_indices_to_deal]
 
   # Place owls
-  board_spaces <- c("purple","red","orange",
+  board_colors <- c("purple","red","orange",
                     "blue","green","yellow",
                     "purple","red","orange",
                     "blue","green","yellow",
@@ -49,9 +49,11 @@ setup_game <- function(n_players = 2, n_owls = 3, n_cards_per_player = 3) {
                     "red","purple","blue",
                     "red","purple","blue",
                     "orange","green","yellow")
-  game$board <- data.frame(space = board_spaces,
+
+  game$board <- data.frame(space = 1:length(board_colors),
+                           color = board_colors,
                            occupied = FALSE)
-  board_length <- length(board_spaces)
+  board_length <- nrow(game$board)
   occupied_spaces <- (board_length-5):(board_length-5+n_owls-1)
   game$board$occupied[occupied_spaces] <- TRUE
 
