@@ -17,8 +17,9 @@
 #' @examples
 #' simulate_game(2,2, strategy_random)
 #'
-simulate_game <- function(n_players, n_owls, strategy, n_cards_per_player=3,
-                          verbose = 0) {
+simulate_game <- function(n_players, n_owls, strategy,
+                          n_cards_per_player = 3,
+                          verbosity = 0) {
   game <- setup_game(n_players = n_players,
                      n_owls    = n_owls,
                      n_cards_per_player = n_cards_per_player)
@@ -34,9 +35,9 @@ simulate_game <- function(n_players, n_owls, strategy, n_cards_per_player=3,
   stopifnot(length(strategy) == n_players)
 
   round <- 0
-  if (verbose) cat("Round:")
+  if (verbosity) cat("Round:")
   while(check_game_status(game) == "in progress") {
-    if (game$turn == 1 & verbose) {
+    if (game$turn == 1 & verbosity) {
       round <- round+1
       cat(round," ",sep="")
     }
