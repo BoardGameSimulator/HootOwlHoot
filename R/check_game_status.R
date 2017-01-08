@@ -5,7 +5,7 @@
 #' @param game A game object
 #' @return A character string with values win, loss, or in progress.
 #' @export
-#' @seealso \link{\code{setup}}
+#' @seealso \code{\link{setup}}
 #' @examples
 #' game <- setup()
 #' check(game)

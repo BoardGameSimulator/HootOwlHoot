@@ -11,8 +11,8 @@
 #' @return A game end state
 #' @details A strategy is a function taking a \code{game} and returning a list
 #'   with elements \code{card} and \code{owl} for the next play. See
-#'   \link{\code{strategy_random}} for an example.
-#' @seealso \link{\code{strategy_random}}
+#'   \code{\link{strategy_random}} for an example.
+#' @seealso \code{\link{strategy_random}}
 #' @export
 #' @examples
 #' simulate_game(2,2, strategy_random)

@@ -6,7 +6,7 @@
 #' @param game A game state
 #' @return An updated game state
 #' @export
-#' @seealso \link{\code{setup_game}}
+#' @seealso \code{\link{setup_game}}
 #' @examples
 #' game <- setup_game()
 #' game <- play_card(game$player$player1[1])

@@ -3,7 +3,7 @@
 #' @param card A string indicating the card
 #' @param game A current game state
 #' @return An updated game state
-#' @seealso \link{\code{play_card}}
+#' @seealso \code{\link{play_card}}
 #'
 discard_and_draw <- function(card, game) {
   # check_card(card, game) # should we check here again?

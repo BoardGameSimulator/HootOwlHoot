@@ -8,7 +8,7 @@
 #'   \code{card} string indicating what card to play
 #'   \code{owl} an integer indicating the owl to move
 #' @export
-#' @seealso \link{\code{strategy_random}}
+#' @seealso \code{\link{strategy_random}}
 #' @examples
 #' game <- setup_game()
 #' strategy_last_owl_farthest(game)

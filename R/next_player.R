@@ -2,7 +2,7 @@
 #'
 #' @param game A current game state
 #' @return An updated game
-#' @seealso \link{\code{play}}
+#' @seealso \code{\link{play}}
 #'
 next_player <- function(game) {
   n_players <- ncol(game$player)
