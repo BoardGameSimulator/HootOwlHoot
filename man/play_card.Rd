@@ -26,6 +26,6 @@ game <- play_card(game$player$player1[1])
 
 }
 \seealso{
-\link{\code{setup_game}}
+\code{\link{setup_game}}
 }
 

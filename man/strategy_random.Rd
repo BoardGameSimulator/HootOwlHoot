@@ -23,6 +23,6 @@ game <- setup_game()
 strategy_random(game)
 }
 \seealso{
-\link{\code{play_card}}
+\code{\link{play_card}}
 }
 

@@ -18,6 +18,6 @@ An updated game state
 Discard a card and draw a new one
 }
 \seealso{
-\link{\code{play_card}}
+\code{\link{play_card}}
 }
 

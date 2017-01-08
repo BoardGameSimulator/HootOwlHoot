@@ -2,6 +2,8 @@
 
 export(check_game_status)
 export(play_card)
+export(run_experiment)
+export(run_experiments)
 export(setup_game)
 export(shuffle)
 export(simulate_game)

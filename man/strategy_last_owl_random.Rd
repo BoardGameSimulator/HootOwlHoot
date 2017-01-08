@@ -23,6 +23,6 @@ game <- setup_game()
 strategy_last_owl_random(game)
 }
 \seealso{
-\link{\code{play_card}}
+\code{\link{play_card}}
 }
 

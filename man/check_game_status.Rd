@@ -21,6 +21,6 @@ check(game)
 
 }
 \seealso{
-\link{\code{setup}}
+\code{\link{setup}}
 }
 

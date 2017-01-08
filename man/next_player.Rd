@@ -16,6 +16,6 @@ An updated game
 Updates the game state to the next player
 }
 \seealso{
-\link{\code{play}}
+\code{\link{play}}
 }
 

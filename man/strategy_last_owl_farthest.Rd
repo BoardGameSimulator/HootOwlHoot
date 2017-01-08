@@ -23,6 +23,6 @@ game <- setup_game()
 strategy_last_owl_farthest(game)
 }
 \seealso{
-\link{\code{strategy_random}}
+\code{\link{strategy_random}}
 }
 
