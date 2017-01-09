@@ -11,14 +11,19 @@
 #' @param n_cards_per_player An integer specifying the number of cards for each
 #'   player.
 #' @param verbosity An integer specifying how much detail to print out (0=none).
-#' @return A data.frame with end game statistics
-#' @seealso \code{\link{simulate_game}}
+#' @return A data.frame with these end game statistics:
+#'   win: logical indicating if the game was won
+#'   n_cards_played: the number of cards played by the players
+#'   n_suns_played: the number of sun cards played by the players (max: 13)
+#'   owl_score: the sum of the space ids for the owls (lower is better, min: 0)
+#'   n_owls_left: the number of owls left on the board
+#' @seealso \code{\link{simulate_game}}, \code{\link{run_experiments}}
 #' @export
 #' @examples
 #' run_experiment(n_players = 2, n_owls = 2, strategy = strategy_random)
 #'
 run_experiment <- function(n_players, n_owls, strategy,
-                           n_cards_per_player, verbosity) {
+                           n_cards_per_player = 3, verbosity = 0) {
   game <- simulate_game(n_players = n_players,
                         n_owls = n_owls,
                         strategy = strategy,
@@ -27,7 +32,9 @@ run_experiment <- function(n_players, n_owls, strategy,
 
   data.frame(win = check_game_status(game) == "win",
              n_cards_played = length(game$discard),
-             n_suns_played = 13 - game$sun)
+             n_suns_played = 13 - game$sun,
+             owl_score = sum(game$board$space[game$board$occupied]),
+             n_owls_left = sum(game$board$occupied))
 }
 
 

@@ -4,7 +4,8 @@
 \alias{run_experiment}
 \title{Run a Hoot Owl Hoot! experiment}
 \usage{
-run_experiment(n_players, n_owls, strategy, n_cards_per_player, verbosity)
+run_experiment(n_players, n_owls, strategy, n_cards_per_player = 3,
+  verbosity = 0)
 }
 \arguments{
 \item{n_players}{An integer specifying the number of players}
@@ -21,7 +22,12 @@ player.}
 \item{verbosity}{An integer specifying how much detail to print out (0=none).}
 }
 \value{
-A data.frame with end game statistics
+A data.frame with these end game statistics:
+  win: logical indicating if the game was won
+  n_cards_played: the number of cards played by the players
+  n_suns_played: the number of sun cards played by the players (max: 13)
+  owl_score: the sum of the space ids for the owls (lower is better, min: 0)
+  n_owls_left: the number of owls left on the board
 }
 \description{
 Simulate a Hoot Owl Hoot! game and record whether the game was
@@ -32,6 +38,6 @@ run_experiment(n_players = 2, n_owls = 2, strategy = strategy_random)
 
 }
 \seealso{
-\code{\link{simulate_game}}
+\code{\link{simulate_game}}, \code{\link{run_experiments}}
 }
 
