@@ -14,7 +14,8 @@ simulate_game(n_players, n_owls, strategy, n_cards_per_player = 3,
 
 \item{strategy}{A function specifying a strategy for all players to use or a
 list of length \code{n_players} where element i specifies a strategy for
-player i. See details for more information.}
+player i. See details for more information. This can also be a character
+of length 1 indicating one of the built-in strategies.}
 
 \item{n_cards_per_player}{An integer specifying the number of cards for each
 player.}

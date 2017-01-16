@@ -4,7 +4,8 @@
 #' @param n_owls An integer specifying the number of owls
 #' @param strategy A function specifying a strategy for all players to use or a
 #'   list of length \code{n_players} where element i specifies a strategy for
-#'   player i. See details for more information.
+#'   player i. See details for more information. This can also be a character
+#'   of length 1 indicating one of the built-in strategies.
 #' @param n_cards_per_player An integer specifying the number of cards for each
 #'   player.
 #' @param verbosity An integer specifying how much detail to print out (0=none).
@@ -24,6 +25,20 @@ simulate_game <- function(n_players, n_owls, strategy,
                      n_owls    = n_owls,
                      n_cards_per_player = n_cards_per_player)
 
+  # If strategy is a string, then we need to call up the appropriate functions.
+  if (is.character(strategy)) {
+    # Check to make sure string is in list of known strategies
+    stopifnot(all(strategy %in% c("random","last_owl_farthest","last_owl_random"))) 
+    
+    if (length(strategy) > 1) 
+      stop("Strategy character vectors are not implemented yet.")
+    
+    strategy <- switch(strategy,
+                       random            = strategy_random,
+                       last_owl_farthest = strategy_last_owl_farthest,
+                       last_owl_random   = strategy_last_owl_random)
+  }
+  
   if (is.function(strategy)) {
     tmp <- strategy
     strategy <- list()
